@@ -2,11 +2,11 @@
 import {useMemo,useState} from 'react';
 import dynamic from 'next/dynamic';
 import {CalendarDays,Users,WalletCards,MessageCircle,Plus,Search,Route,Compass,Bell,MapPin,GripVertical,Hotel,Utensils,Camera,ChevronDown,Share2,MoreHorizontal} from 'lucide-react';
-import type {TripStop} from '@/components/TripMap';
-const TripMap=dynamic(()=>import('@/components/TripMap'),{ssr:false});
+import type {TripStop} from '../components/TripMap';
+const TripMap=dynamic(()=>import('../components/TripMap'),{ssr:false});
 const initial:TripStop[]=[{name:'Colombo',lat:6.9271,lng:79.8612,type:'Starting point'},{name:'Kandy',lat:7.2906,lng:80.6337,type:'City'},{name:'Nuwara Eliya',lat:6.9497,lng:80.7891,type:'City'},{name:'Ella',lat:6.8667,lng:81.0466,type:'Destination'}];
 const activities=[['08:00','Breakfast in Kandy','Cafe • 1h','food'],['09:30','Temple of the Tooth','Attraction • 1h 30m','place'],['12:15','Drive to Nuwara Eliya','77 km • 2h 25m','drive'],['15:00','Gregory Lake','Activity • 1h 30m','place'],['18:30','Hotel check-in','Nuwara Eliya','hotel']];
-export default function Home(){const[stops,setStops]=useState(initial);const[day,setDay]=useState(2);const[query,setQuery]=useState('');const days=['Mon 13','Tue 14','Wed 15','Thu 16'];const mapStops=useMemo(()=>stops,[stops]);return <main className="shell">
+export default function Home(){const[stops]=useState(initial);const[day,setDay]=useState(2);const[query,setQuery]=useState('');const days=['Mon 13','Tue 14','Wed 15','Thu 16'];const mapStops=useMemo(()=>stops,[stops]);return <main className="shell">
 <header className="topbar"><div className="brand"><span className="brandmark"><Compass size={20}/></span>TripFlow</div><nav className="nav"><button className="active">My trips</button><button>Explore</button><button>Saved</button></nav><div className="top-actions"><button className="ghost"><Bell size={18}/></button><button className="primary"><Plus size={16}/> New trip</button><div className="avatar">M</div></div></header>
 <section className="triphead"><div><button className="backlink">← My trips</button><div className="triptitle"><div><h1>Highlands road trip</h1><p><CalendarDays size={14}/> Oct 13–16, 2026 · Sri Lanka · 4 travelers</p></div><div className="headbuttons"><button className="soft"><Users size={16}/> Invite</button><button className="soft"><Share2 size={16}/> Share</button><button className="soft"><MoreHorizontal size={16}/></button></div></div></div></section>
 <div className="tripnav"><button className="active">Plan</button><button>Explore</button><button>Reservations</button><button>Budget</button><button>Checklist</button><button>Chat <span className="badge">3</span></button></div>
