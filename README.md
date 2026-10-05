@@ -1,39 +1,45 @@
-# Smart Trip Planner
+# TripFlow — Smart Trip Planner
 
-A collaborative mobile travel planning app built with React Native, Expo, and TypeScript.
+A desktop-first collaborative trip-planning website built with Next.js, React and TypeScript.
 
-## Current foundation
-- Premium travel-first mobile home UI
-- Create Trip flow
-- Shared trip workspace
-- Day-by-day itinerary UI
-- Members with Owner / Editor / Member roles
-- Group chat UI ready for realtime integration
-- Places and Budget workspaces ready for the next stage
+## Product direction
+The planner combines patterns commonly used by modern travel planners: itinerary + map in one workspace, draggable/reorderable stops, route distance/time, reservations, collaborative planning, budgeting, suggestions, checklists and group chat.
+
+## Current web prototype
+- Responsive premium blue web UI
+- Desktop trip workspace with itinerary and map side-by-side
+- Multi-stop route preview with distance and driving-time summaries
+- Day itinerary and route optimization action
+- Reservations and checklist navigation
+- Tripmate roles (Owner / Editor / Member)
+- Budget summary
+- Group suggestions/voting UI
+- Group chat UI
+- Mobile/tablet responsive layout
 
 ## Stack
-- React Native
-- Expo
+- Next.js 16
+- React 19
 - TypeScript
-- Expo Router
-- Supabase Auth + PostgreSQL + Realtime (planned final integration)
-- ImageKit (planned image storage/delivery)
-- OpenStreetMap (planned maps)
-- Open-Meteo (planned weather)
+- Lucide React
+- Supabase Auth + PostgreSQL + Realtime (integration stage)
+- ImageKit (integration stage)
+- OpenStreetMap + routing/geocoding provider (integration stage)
+- Open-Meteo weather (integration stage)
 
 ## Run
 ```bash
 npm install
-npx expo start
+npm run dev
 ```
 
-Install Expo Go on an Android/iOS phone and scan the QR code shown by Expo.
+Open http://localhost:3000
 
-## Roadmap
-1. React Native / Expo foundation
-2. Premium UI and navigation
-3. Complete Explore, Places, Budget, Suggestions and voting
-4. ImageKit integration
-5. Supabase authentication and database
-6. Supabase Realtime group chat
-7. Maps, weather, notifications and final polish
+## Next stages
+1. Real OpenStreetMap map rendering and geocoding
+2. Route distance/time calculation and stop reordering
+3. Create/edit trip flows and destination discovery
+4. Supabase authentication, trip/member data and permissions
+5. Supabase Realtime collaboration and chat
+6. ImageKit trip/profile/chat images
+7. Budget splitting, reservations, checklist and weather
