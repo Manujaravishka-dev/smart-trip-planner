@@ -1,32 +1,39 @@
 # Smart Trip Planner
 
-A modern Flutter travel planning app focused on collaborative group trips.
+A collaborative mobile travel planning app built with React Native, Expo, and TypeScript.
 
-## Planned features
-- Beautiful travel-first mobile UI
-- Create and manage trips
-- Day-by-day itinerary
-- Group members and shared planning
-- Suggestions, voting, and comments
-- Trip group chat
-- Budget and expense tracking
-- Checklist
-- Maps and weather
-- ImageKit for travel images
-- Supabase Auth, PostgreSQL, and Realtime (final integration stage)
+## Current foundation
+- Premium travel-first mobile home UI
+- Create Trip flow
+- Shared trip workspace
+- Day-by-day itinerary UI
+- Members with Owner / Editor / Member roles
+- Group chat UI ready for realtime integration
+- Places and Budget workspaces ready for the next stage
 
 ## Stack
-- Flutter / Dart
-- Supabase (planned)
-- ImageKit (planned)
-- OpenStreetMap / flutter_map (planned)
-- Open-Meteo (planned)
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- Supabase Auth + PostgreSQL + Realtime (planned final integration)
+- ImageKit (planned image storage/delivery)
+- OpenStreetMap (planned maps)
+- Open-Meteo (planned weather)
 
-## Development stages
-1. Flutter app foundation
+## Run
+```bash
+npm install
+npx expo start
+```
+
+Install Expo Go on an Android/iOS phone and scan the QR code shown by Expo.
+
+## Roadmap
+1. React Native / Expo foundation
 2. Premium UI and navigation
-3. Mock trip, group, itinerary, and chat data
+3. Complete Explore, Places, Budget, Suggestions and voting
 4. ImageKit integration
-5. Supabase Auth + database
-6. Supabase Realtime chat
-7. Maps, weather, and final polish
+5. Supabase authentication and database
+6. Supabase Realtime group chat
+7. Maps, weather, notifications and final polish
